@@ -11,31 +11,31 @@ export default function About() {
   const academicHighlights = [
     {
       degree: 'M.Phil Computer Science',
-      institution: 'Peshawar Pioneer University',
-      desc: 'Advanced research in machine learning frameworks, data annotation, and sequence models.',
+      institution: 'Shaheed Benazir Bhuto University, Sheringal',
+      desc: 'Advanced research in machine learning frameworks, low-resource NLP sequence models, and social media text mining.',
       icon: GraduationCap,
       color: 'text-blue-400 bg-blue-500/15',
     },
     {
       degree: 'Master of Computer Science (MCS)',
-      institution: 'University of Peshawar',
-      desc: 'Sound foundation in algorithms, databases, web development, and software engineering principles.',
+      institution: 'Virtual University of Pakistan',
+      desc: 'Comprehensive study of distributed databases, advanced algorithms, and full-stack software architectures.',
       icon: GraduationCap,
       color: 'text-emerald-400 bg-emerald-500/15',
     },
     {
-      degree: 'Microsoft Certified Systems Engineer (MCSE)',
-      institution: 'Microsoft Global Credentials',
-      desc: 'Enterprise routing optimization, directory governance, and virtual infrastructure topology structures.',
-      icon: Award,
-      color: 'text-amber-400 bg-amber-500/15',
+      degree: 'Bachelor of Science in Computer Science (B.Sc CS)',
+      institution: 'University of Peshawar',
+      desc: 'Sound foundation in computer programming, calculus, statistics, database management, and computation theory.',
+      icon: GraduationCap,
+      color: 'text-indigo-400 bg-indigo-500/15',
     },
     {
-      degree: 'Diploma in Information Technology (DIT)',
-      institution: 'KP Board of Technical Education',
-      desc: 'Systems operations diagnostics, desktop databases, and low level localized hardware configs.',
+      degree: 'Microsoft Certified Systems Engineer (MCSE)',
+      institution: 'Microsoft Global Credentials',
+      desc: 'Enterprise routing optimization, directory governance, secure virtual networks, and hybrid infrastructure.',
       icon: Award,
-      color: 'text-indigo-400 bg-indigo-500/15',
+      color: 'text-amber-400 bg-amber-500/15',
     },
   ];
 
@@ -72,6 +72,17 @@ export default function About() {
             <p className="text-slate-400 leading-relaxed text-base font-sans font-light">
               {personalInfo.aboutMe}
             </p>
+
+            <div className="py-4 border-y border-white/5 grid grid-cols-2 gap-4 font-sans text-xs sm:text-sm">
+              <div className="flex flex-col text-left">
+                <span className="font-mono text-[10px] text-slate-500 uppercase tracking-widest block font-bold mt-1">Date of Birth</span>
+                <span className="text-white font-medium">{personalInfo.dob || '25 March 1991'}</span>
+              </div>
+              <div className="flex flex-col text-left">
+                <span className="font-mono text-[10px] text-slate-500 uppercase tracking-widest block font-bold mt-1">Location</span>
+                <span className="text-white font-medium">{personalInfo.location}</span>
+              </div>
+            </div>
 
             <div className="pt-4 grid grid-cols-1 sm:grid-cols-3 gap-6">
               {coreFocus.map((focus, i) => (

@@ -14,6 +14,7 @@ export const personalInfo = {
   email: 'wardag.atta@gmail.com',
   phone: '+92 345 9876543', // Professional Pakistani format
   location: 'Peshawar, Khyber Pakhtunkhwa, Pakistan',
+  dob: '25 March 1991',
   github: 'https://github.com/attaullah',
   linkedin: 'https://linkedin.com/in/atta-ullah',
   researchGate: 'https://www.researchgate.net/profile/Atta-Ullah',
@@ -170,21 +171,21 @@ export const educationHistory: EducationItem[] = [
   {
     id: 'e1',
     degree: 'M.Phil in Computer Science',
-    institution: 'Peshawar Pioneer University / Research Institution',
-    location: 'Peshawar, KP, Pakistan',
+    institution: 'Shaheed Benazir Bhuto University, Sheringal',
+    location: 'Sheringal, Dir Upper, KP, Pakistan',
     duration: '2024 - Active (In-Progress)',
     details: [
-      'Focusing theoretical foundation of compute science, Advanced Machine Learning, and NLP.',
+      'Focusing theoretical foundation of computer science, Advanced Machine Learning, and NLP.',
       'Dissertation focuses on deep-learning models for hate-speech and sentiment mining in low-resource dialectal social-media corpuses.',
       'Conducting rigorous academic literature reviews and dataset annotation pipelines.'
     ],
-    grade: 'Research Phase (CGPA 3.8/4.0 in coursework)'
+    grade: 'Research Phase'
   },
   {
     id: 'e2',
     degree: 'Master of Computer Science (MCS)',
-    institution: 'University of Peshawar / Regional Excellence Institute',
-    location: 'Peshawar, KP, Pakistan',
+    institution: 'Virtual University of Pakistan',
+    location: 'Peshawar Campus, Pakistan',
     duration: '2020 - 2022',
     details: [
       'Comprehensive curriculum covering Database Management Systems, Software Engineering, Object-Oriented Analysis, and Web Applications.',
@@ -194,6 +195,18 @@ export const educationHistory: EducationItem[] = [
   },
   {
     id: 'e3',
+    degree: 'Bachelor of Science in Computer Science (B.Sc CS)',
+    institution: 'University of Peshawar',
+    location: 'Peshawar, KP, Pakistan',
+    duration: '2017 - 2019',
+    details: [
+      'Rigorous foundation in computer science theory, algorithms, programming, and mathematical analysis.',
+      'Practical projects covering database engines, structural layouts, and numerical calculations.'
+    ],
+    grade: 'First Division'
+  },
+  {
+    id: 'e4',
     degree: 'Diploma in Information Technology (DIT)',
     institution: 'Khyber Pakhtunkhwa Board of Technical Education',
     location: 'Peshawar, Pakistan',
@@ -204,7 +217,7 @@ export const educationHistory: EducationItem[] = [
     ]
   },
   {
-    id: 'e4',
+    id: 'e5',
     degree: 'Microsoft Certified Systems Engineer (MCSE)',
     institution: 'Microsoft Certified Training Academy & Pearson Vue',
     location: 'Pakistan (Global Credential)',
