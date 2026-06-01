@@ -43,7 +43,7 @@ export default function App() {
   }, [darkMode]);
 
   return (
-    <div id="portfolio-root" className="min-h-screen bg-slate-50 dark:bg-slate-900 transition-colors duration-300">
+    <div id="portfolio-root" className="min-h-screen bg-slate-950 dark:bg-slate-950 text-slate-100 transition-colors duration-300">
       {/* Dynamic Header / Navigation */}
       <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
 

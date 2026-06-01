@@ -69,19 +69,19 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 bg-white dark:bg-slate-950 transition-colors">
+    <section id="contact" className="py-24 bg-slate-950 dark:bg-slate-950 border-y border-white/5 transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="font-sans font-bold text-xs uppercase tracking-widest text-blue-600 dark:text-blue-400 mb-2">
+          <h2 className="font-mono font-bold text-xs uppercase tracking-[0.2em] text-blue-400 mb-2">
             Inquiries
           </h2>
-          <p className="font-sans font-extrabold text-3xl sm:text-4xl text-slate-900 dark:text-white tracking-tight">
+          <p className="font-serif italic text-glow text-3xl sm:text-5xl text-white tracking-tighter">
             Get In Touch
           </p>
-          <div className="w-12 h-1 bg-blue-600 dark:bg-blue-500 mx-auto mt-4 rounded-full" />
-          <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400 mt-4 font-sans max-w-2xl mx-auto">
+          <div className="w-12 h-1 bg-blue-500 mx-auto mt-4 rounded-full text-glow" />
+          <p className="text-sm sm:text-base text-slate-400 mt-4 font-sans max-w-2xl mx-auto font-light">
             Whether inquiring about Pashto text corpora, academic cooperation, systems architecture guidance in the judiciary, or software collaborations—feel free to drop a message.
           </p>
         </div>
@@ -90,25 +90,25 @@ export default function Contact() {
           
           {/* Info Details column (Left) */}
           <div className="lg:col-span-5 space-y-6">
-            <h3 className="font-sans font-bold text-2xl text-slate-900 dark:text-white tracking-tight flex items-center gap-1.5">
-              <MessageCircle className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+            <h3 className="font-serif italic text-2.5xl text-white tracking-tight flex items-center gap-1.5 text-glow">
+              <MessageCircle className="w-6 h-6 text-blue-400 text-glow" />
               Contact Details
             </h3>
-            <p className="font-sans text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-6">
+            <p className="font-sans text-sm text-slate-400 leading-relaxed font-light mb-6">
               You can connect with me through my research profiles, professional email, or direct telephone line (Pakistan regional time UTC+5).
             </p>
 
             <div className="space-y-4 pt-2">
               {/* Email channel */}
-              <div className="flex items-start space-x-4 p-4 rounded-2xl bg-slate-50 dark:bg-slate-905 border border-gray-150 dark:border-slate-800">
-                <div className="p-3 bg-blue-100 dark:bg-blue-900/50 text-blue-600 dark:text-blue-400 rounded-xl shrink-0">
-                  <Mail className="w-5.5 h-5.5" />
+              <div className="flex items-start space-x-4 p-4 rounded-3xl glass bg-slate-900/10 border border-white/5 shadow-2xl">
+                <div className="p-3 bg-blue-500/10 text-blue-400 rounded-xl shrink-0">
+                  <Mail className="w-5.5 h-5.5 text-glow" />
                 </div>
-                <div className="space-y-0.5">
-                  <span className="font-mono text-[9px] text-gray-400 uppercase tracking-widest font-semibold block">Primary Mail</span>
+                <div className="space-y-0.5 text-left">
+                  <span className="font-mono text-[9px] text-slate-500 uppercase tracking-widest font-bold block">Primary Mail</span>
                   <a
                     href={`mailto:${personalInfo.email}`}
-                    className="font-sans font-bold text-sm sm:text-base text-slate-800 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 break-all transition-colors"
+                    className="font-sans font-bold text-sm sm:text-base text-slate-200 hover:text-blue-400 break-all transition-colors"
                   >
                     {personalInfo.email}
                   </a>
@@ -116,15 +116,15 @@ export default function Contact() {
               </div>
 
               {/* Phone channel */}
-              <div className="flex items-start space-x-4 p-4 rounded-2xl bg-slate-50 dark:bg-slate-905 border border-gray-150 dark:border-slate-800">
-                <div className="p-3 bg-emerald-100 dark:bg-emerald-900/50 text-emerald-600 dark:text-emerald-400 rounded-xl shrink-0">
-                  <Phone className="w-5.5 h-5.5" />
+              <div className="flex items-start space-x-4 p-4 rounded-3xl glass bg-slate-900/10 border border-white/5 shadow-2xl">
+                <div className="p-3 bg-emerald-500/10 text-emerald-400 rounded-xl shrink-0">
+                  <Phone className="w-5.5 h-5.5 text-glow" />
                 </div>
-                <div className="space-y-0.5">
-                  <span className="font-mono text-[9px] text-gray-400 uppercase tracking-widest font-semibold block">Professional Mobile</span>
+                <div className="space-y-0.5 text-left">
+                  <span className="font-mono text-[9px] text-slate-500 uppercase tracking-widest font-bold block">Professional Mobile</span>
                   <a
                     href={`tel:${personalInfo.phone.replace(/\s+/g, '')}`}
-                    className="font-sans font-bold text-sm sm:text-base text-slate-800 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                    className="font-sans font-bold text-sm sm:text-base text-slate-200 hover:text-blue-400 transition-colors"
                   >
                     {personalInfo.phone}
                   </a>
@@ -132,13 +132,13 @@ export default function Contact() {
               </div>
 
               {/* Location channel */}
-              <div className="flex items-start space-x-4 p-4 rounded-2xl bg-slate-50 dark:bg-slate-905 border border-gray-150 dark:border-slate-800">
-                <div className="p-3 bg-amber-100 dark:bg-amber-900/50 text-amber-600 dark:text-amber-400 rounded-xl shrink-0">
-                  <MapPin className="w-5.5 h-5.5" />
+              <div className="flex items-start space-x-4 p-4 rounded-3xl glass bg-slate-900/10 border border-white/5 shadow-2xl">
+                <div className="p-3 bg-amber-500/10 text-amber-400 rounded-xl shrink-0">
+                  <MapPin className="w-5.5 h-5.5 text-glow" />
                 </div>
-                <div className="space-y-0.5">
-                  <span className="font-mono text-[9px] text-gray-400 uppercase tracking-widest font-semibold block">Location</span>
-                  <p className="font-sans font-bold text-sm sm:text-base text-slate-800 dark:text-white">
+                <div className="space-y-0.5 text-left">
+                  <span className="font-mono text-[9px] text-slate-500 uppercase tracking-widest font-bold block">Location</span>
+                  <p className="font-sans font-bold text-sm sm:text-base text-slate-200">
                     {personalInfo.location}
                   </p>
                 </div>
@@ -146,14 +146,14 @@ export default function Contact() {
             </div>
 
             {/* Quick platform anchors */}
-            <div className="pt-6 border-t border-gray-150 dark:border-slate-800/80">
-              <span className="font-mono text-[10px] text-gray-400 dark:text-gray-500 uppercase tracking-widest block mb-3.5">Research Registries:</span>
-              <div className="flex items-center space-x-3.5">
+            <div className="pt-6 border-t border-white/5">
+              <span className="font-mono text-[10px] text-slate-500 uppercase tracking-widest block mb-3.5">Research Registries:</span>
+              <div className="flex flex-wrap gap-3 items-center">
                 <a
                   href={personalInfo.github}
                   target="_blank"
                   rel="noreferrer"
-                  className="flex items-center space-x-2 px-3.5 py-1.5 rounded-lg border border-gray-200 dark:border-slate-800 bg-white dark:bg-slate-900 font-sans text-xs font-semibold text-slate-705 dark:text-slate-350 hover:border-blue-500/25 hover:text-blue-600 transition-all shadow-2xs"
+                  className="flex items-center space-x-2 px-3.5 py-1.5 rounded-xl border border-white/5 bg-slate-900/10 font-sans text-xs font-semibold text-slate-400 hover:border-blue-500/25 hover:text-blue-400 transition-all shadow-2xs font-mono tracking-widest uppercase"
                 >
                   <Github className="w-4 h-4" />
                   <span>GitHub</span>
@@ -162,7 +162,7 @@ export default function Contact() {
                   href={personalInfo.linkedin}
                   target="_blank"
                   rel="noreferrer"
-                  className="flex items-center space-x-2 px-3.5 py-1.5 rounded-lg border border-gray-200 dark:border-slate-800 bg-white dark:bg-slate-900 font-sans text-xs font-semibold text-slate-705 dark:text-slate-350 hover:border-blue-500/25 hover:text-blue-600 transition-all shadow-2xs"
+                  className="flex items-center space-x-2 px-3.5 py-1.5 rounded-xl border border-white/5 bg-slate-900/10 font-sans text-xs font-semibold text-slate-400 hover:border-blue-500/25 hover:text-blue-400 transition-all shadow-2xs font-mono tracking-widest uppercase"
                 >
                   <Linkedin className="w-4 h-4" />
                   <span>LinkedIn</span>
@@ -171,9 +171,9 @@ export default function Contact() {
                   href={personalInfo.researchGate}
                   target="_blank"
                   rel="noreferrer"
-                  className="flex items-center space-x-2 px-3.5 py-1.5 rounded-lg border border-gray-200 dark:border-slate-800 bg-white dark:bg-slate-900 font-sans text-xs font-semibold text-slate-750 dark:text-slate-350 hover:border-blue-500/25 hover:text-blue-600 transition-all shadow-2xs"
+                  className="flex items-center space-x-2 px-3.5 py-1.5 rounded-xl border border-white/5 bg-slate-900/10 font-sans text-xs font-semibold text-slate-400 hover:border-blue-500/25 hover:text-blue-400 transition-all shadow-2xs font-mono tracking-widest uppercase"
                 >
-                  <span className="text-[10px] font-bold border border-slate-400 dark:border-slate-700 px-0.5 rounded-sm">RG</span>
+                  <span className="text-[10px] font-bold border border-slate-700 px-1 rounded-sm text-glow">RG</span>
                   <span>ResearchGate</span>
                 </a>
               </div>
@@ -182,7 +182,7 @@ export default function Contact() {
 
           {/* Contact Interactive Form (Right) */}
           <div className="lg:col-span-7">
-            <div className="bg-slate-50 dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-gray-150 dark:border-slate-800 shadow-xs relative">
+            <div className="glass border border-white/5 bg-slate-900/10 rounded-3xl p-6 sm:p-8 shadow-2xl relative">
               <AnimatePresence mode="wait">
                 {isSuccess ? (
                   <motion.div
@@ -192,12 +192,12 @@ export default function Contact() {
                     exit={{ scale: 0.95, opacity: 0 }}
                     className="py-12 flex flex-col items-center justify-center text-center space-y-4"
                   >
-                    <CheckCircle2 className="w-16 h-16 text-emerald-550 dark:text-emerald-400 animate-bounce" />
+                    <CheckCircle2 className="w-16 h-16 text-emerald-400 text-glow animate-bounce" />
                     <div className="space-y-1 max-w-sm">
-                      <h4 className="font-sans font-extrabold text-xl text-slate-900 dark:text-white tracking-tight">
+                      <h4 className="font-serif italic text-white text-xl tracking-tight text-glow">
                         Message Sent Successfully!
                       </h4>
-                      <p className="font-sans text-xs sm:text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+                      <p className="font-sans text-xs sm:text-sm text-slate-400 leading-relaxed font-light">
                         Thank you for reaching out to Atta Ullah. Your inquiry has been cached locally, and a response will be dispatched to your email address soon.
                       </p>
                     </div>
@@ -209,12 +209,12 @@ export default function Contact() {
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     onSubmit={handleSubmit}
-                    className="space-y-5"
+                    className="space-y-5 text-left"
                     noValidate
                   >
                     {/* Name field */}
                     <div className="space-y-1.5">
-                      <label htmlFor="contact-name" className="block text-xs font-bold text-slate-700 dark:text-slate-300 font-sans uppercase tracking-wider">
+                      <label htmlFor="contact-name" className="block text-xs font-bold text-slate-400 font-mono uppercase tracking-widest">
                         Full Name / Academic Entity <span className="text-red-500">*</span>
                       </label>
                       <input
@@ -223,22 +223,22 @@ export default function Contact() {
                         name="name"
                         value={formData.name}
                         onChange={handleInputChange}
-                        className={`w-full px-4 py-3 rounded-xl border bg-white dark:bg-slate-950 text-slate-900 dark:text-white font-sans text-sm focus:outline-hidden focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all ${
+                        className={`w-full px-4 py-3 rounded-xl border bg-slate-950 text-white font-sans text-sm focus:outline-hidden focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all ${
                           errors.name
-                            ? 'border-red-400 focus:ring-red-500'
-                            : 'border-gray-200 dark:border-slate-800'
+                            ? 'border-red-500/50 focus:ring-red-500'
+                            : 'border-white/5'
                         }`}
                         placeholder="e.g. Dr. Salman Khan / University of Peshawar"
                         disabled={isLoading}
                       />
                       {errors.name && (
-                        <p className="font-mono text-[11px] text-red-500">{errors.name}</p>
+                        <p className="font-mono text-[11px] text-red-400">{errors.name}</p>
                       )}
                     </div>
 
                     {/* Email field */}
                     <div className="space-y-1.5">
-                      <label htmlFor="contact-email" className="block text-xs font-bold text-slate-700 dark:text-slate-300 font-sans uppercase tracking-wider">
+                      <label htmlFor="contact-email" className="block text-xs font-bold text-slate-400 font-mono uppercase tracking-widest">
                         Email Address <span className="text-red-500">*</span>
                       </label>
                       <input
@@ -247,10 +247,10 @@ export default function Contact() {
                         name="email"
                         value={formData.email}
                         onChange={handleInputChange}
-                        className={`w-full px-4 py-3 rounded-xl border bg-white dark:bg-slate-950 text-slate-900 dark:text-white font-sans text-sm focus:outline-hidden focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all ${
+                        className={`w-full px-4 py-3 rounded-xl border bg-slate-950 text-white font-sans text-sm focus:outline-hidden focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all ${
                           errors.email
-                            ? 'border-red-400 focus:ring-red-500'
-                            : 'border-gray-200 dark:border-slate-800'
+                            ? 'border-red-500/50 focus:ring-red-500'
+                            : 'border-white/5'
                         }`}
                         placeholder="yourname@domain.com"
                         disabled={isLoading}
@@ -262,7 +262,7 @@ export default function Contact() {
 
                     {/* Subject field */}
                     <div className="space-y-1.5">
-                      <label htmlFor="contact-subject" className="block text-xs font-bold text-slate-700 dark:text-slate-300 font-sans uppercase tracking-wider">
+                      <label htmlFor="contact-subject" className="block text-xs font-bold text-slate-400 font-mono uppercase tracking-widest">
                         Inquiry Subject <span className="text-red-500">*</span>
                       </label>
                       <input
@@ -271,10 +271,10 @@ export default function Contact() {
                         name="subject"
                         value={formData.subject}
                         onChange={handleInputChange}
-                        className={`w-full px-4 py-3 rounded-xl border bg-white dark:bg-slate-950 text-slate-900 dark:text-white font-sans text-sm focus:outline-hidden focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all ${
+                        className={`w-full px-4 py-3 rounded-xl border bg-slate-950 text-white font-sans text-sm focus:outline-hidden focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all ${
                           errors.subject
-                            ? 'border-red-400 focus:ring-red-500'
-                            : 'border-gray-200 dark:border-slate-800'
+                            ? 'border-red-500/50 focus:ring-red-500'
+                            : 'border-white/5'
                         }`}
                         placeholder="e.g. Dialogue on Pashto Datasets Collaboration"
                         disabled={isLoading}
@@ -286,7 +286,7 @@ export default function Contact() {
 
                     {/* Message field */}
                     <div className="space-y-1.5">
-                      <label htmlFor="contact-message" className="block text-xs font-bold text-slate-700 dark:text-slate-300 font-sans uppercase tracking-wider">
+                      <label htmlFor="contact-message" className="block text-xs font-bold text-slate-400 font-mono uppercase tracking-widest">
                         Message Content <span className="text-red-500">*</span>
                       </label>
                       <textarea
@@ -295,10 +295,10 @@ export default function Contact() {
                         value={formData.message}
                         onChange={handleInputChange}
                         rows={5}
-                        className={`w-full px-4 py-3 rounded-xl border bg-white dark:bg-slate-950 text-slate-900 dark:text-white font-sans text-sm focus:outline-hidden focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-y ${
+                        className={`w-full px-4 py-3 rounded-xl border bg-slate-950 text-white font-sans text-sm focus:outline-hidden focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-y ${
                           errors.message
-                            ? 'border-red-400 focus:ring-red-500'
-                            : 'border-gray-200 dark:border-slate-800'
+                            ? 'border-red-500/50 focus:ring-red-500'
+                            : 'border-white/5'
                         }`}
                         placeholder="Write your research questions or business requests detailed here..."
                         disabled={isLoading}
@@ -313,16 +313,16 @@ export default function Contact() {
                       type="submit"
                       id="contact-submit-btn"
                       disabled={isLoading}
-                      className="flex items-center justify-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold text-base w-full px-4 py-3.5 rounded-xl shadow-md transition-all active:scale-98 disabled:opacity-75 disabled:active:scale-100 cursor-pointer text-center"
+                      className="flex items-center justify-center space-x-2 bg-blue-600 hover:bg-blue-500 text-white font-bold text-sm w-full px-4 py-3.5 rounded-xl shadow-lg shadow-blue-500/10 transition-all active:scale-98 disabled:opacity-75 disabled:active:scale-100 cursor-pointer text-center font-mono uppercase tracking-widest text-glow border border-blue-500/25"
                     >
                       {isLoading ? (
                         <>
-                          <Loader2 className="w-5 h-5 animate-spin mr-1" />
+                          <Loader2 className="w-5 h-5 animate-spin mr-1 text-glow" />
                           <span>Dispatching Message...</span>
                         </>
                       ) : (
                         <>
-                          <Send className="w-4.5 h-4.5 mr-1" />
+                          <Send className="w-4.5 h-4.5 mr-1 text-glow" />
                           <span>Transmit Message</span>
                         </>
                       )}

@@ -61,19 +61,19 @@ export default function Skills() {
   };
 
   return (
-    <section id="skills" className="py-24 bg-slate-50 dark:bg-slate-900 border-y border-gray-150 dark:border-slate-800 transition-colors">
+    <section id="skills" className="py-24 bg-slate-950 dark:bg-slate-950 border-y border-white/5 transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="font-sans font-bold text-xs uppercase tracking-widest text-blue-600 dark:text-blue-400 mb-2">
+          <h2 className="font-mono font-bold text-xs uppercase tracking-[0.2em] text-blue-400 mb-2">
             Expertise
           </h2>
-          <p className="font-sans font-extrabold text-3xl sm:text-4xl text-slate-900 dark:text-white tracking-tight">
+          <p className="font-serif italic text-glow text-3xl sm:text-5xl text-white tracking-tighter">
             Technical Skillset
           </p>
-          <div className="w-12 h-1 bg-blue-600 dark:bg-blue-500 mx-auto mt-4 rounded-full" />
-          <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400 mt-4 font-sans">
+          <div className="w-12 h-1 bg-blue-500 mx-auto mt-4 rounded-full text-glow" />
+          <p className="text-sm sm:text-base text-slate-400 mt-4 font-sans font-light">
             A comprehensive profile of my programming capacity, web integration mastery, and specialized Artificial Intelligence/NLP model deployment skills.
           </p>
         </div>
@@ -85,13 +85,13 @@ export default function Skills() {
               key={cat.id}
               id={`skill-filter-${cat.id}`}
               onClick={() => setActiveCategory(cat.id as SkillCategory)}
-              className={`flex items-center space-x-2 px-4 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 cursor-pointer ${
+              className={`flex items-center space-x-2 px-4 py-2.5 rounded-full text-sm font-medium transition-all duration-200 cursor-pointer ${
                 activeCategory === cat.id
-                  ? 'bg-blue-600 text-white shadow-md shadow-blue-500/25 scale-102'
-                  : 'bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-gray-100 dark:hover:bg-slate-750 border border-gray-150 dark:border-slate-700/60'
+                  ? 'bg-blue-600/20 text-blue-400 border border-blue-500/35 text-glow scale-102'
+                  : 'bg-slate-900/35 border border-white/5 text-slate-300 hover:bg-slate-900'
               }`}
             >
-              <cat.icon className="w-4 h-4" />
+              <cat.icon className="w-4 h-4 text-glow" />
               <span>{cat.label}</span>
             </button>
           ))}
@@ -114,31 +114,31 @@ export default function Skills() {
                   transition={{ duration: 0.25 }}
                   key={skill.name}
                   id={`skill-card-${skill.name.toLowerCase().replace(/\s+/g, '-')}`}
-                  className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-150 dark:border-slate-750/70 p-5 shadow-xs hover:shadow-md transition-all relative overflow-hidden group"
+                  className="glass p-5 border border-white/5 bg-slate-900/15 rounded-2xl shadow-xl transition-all relative overflow-hidden group hover:border-blue-500/25"
                 >
                   <div className="flex justify-between items-center mb-3">
-                    <span className="font-sans font-bold text-slate-800 dark:text-slate-100 text-base group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                    <span className="font-sans font-bold text-white text-base group-hover:text-blue-400 transition-colors">
                       {skill.name}
                     </span>
-                    <span className={`font-mono text-xs font-bold px-2 py-0.5 rounded-sm ${theme.textColor} ${theme.bgColor}`}>
+                    <span className={`font-mono text-xs font-bold px-2 py-0.5 rounded-md ${theme.textColor} ${theme.bgColor} border border-white/5`}>
                       {skill.level}%
                     </span>
                   </div>
 
                   {/* Progress Track */}
-                  <div className="w-full bg-gray-100 dark:bg-slate-700 h-2 rounded-full overflow-hidden mb-3">
+                  <div className="w-full bg-slate-900 h-2 rounded-full overflow-hidden mb-3">
                     <motion.div
                       initial={{ width: 0 }}
                       animate={{ width: `${skill.level}%` }}
                       transition={{ duration: 0.5, ease: 'easeOut' }}
-                      className="bg-blue-600 dark:bg-blue-500 h-full rounded-full bg-linear-to-r from-blue-600 via-blue-500 to-indigo-600"
+                      className="h-full rounded-full bg-linear-to-r from-blue-500 to-indigo-600 text-glow"
                     />
                   </div>
 
                   {/* Category Identifier */}
                   <div className="flex items-center space-x-1.5 pt-1">
                     <span className={`w-1.5 h-1.5 rounded-full ${theme.indigoDot}`} />
-                    <span className="font-mono text-[10px] text-gray-400 uppercase tracking-widest">
+                    <span className="font-mono text-[10px] text-slate-400 uppercase tracking-widest">
                       {skill.category === 'ai-nlp' && 'AI & Natural Language Processing'}
                       {skill.category === 'programming' && 'Programming Core'}
                       {skill.category === 'web-dev' && 'Web Technology Stack'}

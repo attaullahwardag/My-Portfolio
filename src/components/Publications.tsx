@@ -20,18 +20,18 @@ export default function Publications() {
   };
 
   return (
-    <section id="publications" className="py-24 bg-white dark:bg-slate-950 transition-colors">
+    <section id="publications" className="py-24 bg-slate-950 dark:bg-slate-950 border-y border-white/5 transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="font-sans font-bold text-xs uppercase tracking-widest text-blue-600 dark:text-blue-400 mb-2">
+          <h2 className="font-mono font-bold text-xs uppercase tracking-[0.2em] text-blue-400 mb-2">
             Academic Track
           </h2>
-          <p className="font-sans font-extrabold text-3xl sm:text-4xl text-slate-900 dark:text-white tracking-tight">
+          <p className="font-serif italic text-glow text-3xl sm:text-5xl text-white tracking-tighter">
             Publications & Papers
           </p>
-          <div className="w-12 h-1 bg-blue-600 dark:bg-blue-500 mx-auto mt-4 rounded-full" />
+          <div className="w-12 h-1 bg-blue-500 mx-auto mt-4 rounded-full text-glow" />
         </div>
 
         {/* Publications Stack */}
@@ -43,63 +43,63 @@ export default function Publications() {
                 key={doc.id}
                 id={`publication-card-${doc.id}`}
                 whileHover={{ y: -1 }}
-                className="bg-slate-50 dark:bg-slate-900 border border-gray-150 dark:border-slate-800 rounded-3xl p-6 sm:p-8 hover:border-blue-500/20 dark:hover:border-blue-500/20 transition-all font-sans relative overflow-hidden"
+                className="glass border border-white/5 bg-slate-900/15 rounded-3xl p-6 sm:p-8 hover:border-blue-500/25 transition-all font-sans relative overflow-hidden shadow-2xl text-left"
               >
                 {/* Visual state pill in corner */}
                 <div className="absolute top-4 right-4 sm:top-6 sm:right-6">
                   <span className={`inline-flex items-center px-3 py-1 rounded-full text-[10px] uppercase font-bold tracking-widest border ${
                     doc.status === 'Under Review'
-                      ? 'bg-amber-50 text-amber-700 border-amber-200/50 dark:bg-amber-950/30 dark:text-amber-400 dark:border-amber-900/40'
-                      : 'bg-blue-50 text-blue-700 border-blue-200/50 dark:bg-blue-950/30 dark:text-blue-400 dark:border-blue-900/40'
+                      ? 'bg-amber-500/10 text-amber-400 border-amber-500/20 text-glow'
+                      : 'bg-blue-500/10 text-blue-400 border-blue-500/20 text-glow'
                   }`}>
                     {doc.status}
                   </span>
                 </div>
 
                 <div className="space-y-4">
-                  <div className="flex items-center space-x-2 text-blue-600 dark:text-blue-400">
-                    <BookOpen className="w-5 h-5 shrink-0" />
-                    <span className="font-mono text-[10px] uppercase tracking-wider font-bold">Research Dissertation Preprint</span>
+                  <div className="flex items-center space-x-2 text-blue-400">
+                    <BookOpen className="w-5 h-5 shrink-0 text-glow" />
+                    <span className="font-mono text-[10px] uppercase tracking-wider font-bold text-glow">Research Dissertation Preprint</span>
                   </div>
 
-                  <h3 className="font-sans font-extrabold text-lg sm:text-xl text-slate-900 dark:text-white pr-20 leading-tight">
+                  <h3 className="font-serif italic text-white text-lg sm:text-xl pr-20 leading-snug tracking-tight text-glow">
                     "{doc.title}"
                   </h3>
 
                   {/* Authors line */}
-                  <div className="text-xs text-slate-500 dark:text-slate-400 flex flex-wrap gap-1 items-center">
-                    <span className="font-bold text-slate-655 dark:text-slate-300">Authors:</span>
+                  <div className="text-xs text-slate-400 flex flex-wrap gap-1 items-center font-light">
+                    <span className="font-bold text-blue-400 text-glow font-mono uppercase text-[10px] tracking-wider font-semibold">Authors:</span>
                     <span>{doc.authors}</span>
                   </div>
 
                   {/* Conference / Date line */}
-                  <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6 pt-1 text-xs text-slate-500">
-                    <span className="flex items-center text-blue-700 dark:text-blue-400 font-semibold font-mono uppercase tracking-wider">
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6 pt-1 text-xs text-slate-400 font-light">
+                    <span className="flex items-center text-blue-400 font-bold font-mono uppercase tracking-wider text-glow">
                       <CornerDownRight className="w-3.5 h-3.5 mr-1" />
                       {doc.venue}
                     </span>
-                    <span className="flex items-center text-gray-400">
+                    <span className="flex items-center text-slate-500">
                       <Calendar className="w-3.5 h-3.5 mr-1" />
                       {doc.date}
                     </span>
                   </div>
 
                   {/* Interactive Abstract toggle and block */}
-                  <div className="pt-4 border-t border-gray-200/50 dark:border-slate-800/60 flex flex-col justify-start">
+                  <div className="pt-4 border-t border-white/5 flex flex-col justify-start">
                     <button
                       id={`btn-toggle-abstract-${doc.id}`}
                       onClick={() => toggleAbstract(doc.id)}
-                      className="flex items-center space-x-1.5 text-xs text-slate-500 dark:text-slate-350 hover:text-blue-650 dark:hover:text-blue-400 font-bold select-none cursor-pointer focus:outline-hidden self-start"
+                      className="flex items-center space-x-1.5 text-xs text-slate-400 hover:text-blue-400 font-bold select-none cursor-pointer focus:outline-hidden self-start transition-colors text-glow"
                     >
                       {isAbstractExpanded ? (
                         <>
                           <Minus className="w-4 h-4 text-red-500" />
-                          <span>Close Text Abstract</span>
+                          <span className="font-mono text-[10px] uppercase tracking-widest text-glow">Close Text Abstract</span>
                         </>
                       ) : (
                         <>
-                          <Plus className="w-4 h-4 text-blue-500" />
-                          <span>View Text Abstract Summary</span>
+                          <Plus className="w-4 h-4 text-blue-400 text-glow" />
+                          <span className="font-mono text-[10px] uppercase tracking-widest text-glow">View Text Abstract Summary</span>
                         </>
                       )}
                     </button>
@@ -112,13 +112,13 @@ export default function Publications() {
                           animate={{ height: 'auto', opacity: 1 }}
                           exit={{ height: 0, opacity: 0 }}
                           transition={{ duration: 0.25 }}
-                          className="overflow-hidden mt-3 p-4 bg-white dark:bg-slate-950 rounded-2xl border border-gray-150 dark:border-slate-850"
+                          className="overflow-hidden mt-3 p-4 bg-slate-950/80 rounded-2xl border border-white/5"
                         >
-                          <div className="flex items-start space-x-2.5">
-                            <FileText className="w-4.5 h-4.5 text-blue-500 shrink-0 mt-0.5" />
+                          <div className="flex items-start space-x-2.5 text-left">
+                            <FileText className="w-4.5 h-4.5 text-blue-400 shrink-0 mt-0.5 text-glow" />
                             <div className="space-y-1">
-                              <span className="font-mono text-[9px] text-gray-400 uppercase tracking-widest font-semibold block">Abstract Context:</span>
-                              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-sans">
+                              <span className="font-mono text-[9px] text-slate-500 uppercase tracking-widest block font-bold">Abstract Context:</span>
+                              <p className="text-xs sm:text-sm text-slate-400 leading-relaxed font-sans font-light">
                                 {doc.abstract}
                               </p>
                             </div>

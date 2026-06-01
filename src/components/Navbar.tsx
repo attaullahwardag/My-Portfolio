@@ -80,7 +80,7 @@ export default function Navbar({ darkMode, setDarkMode }: NavbarProps) {
       id="main-header"
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-white/90 dark:bg-slate-900/90 backdrop-blur-md shadow-md py-3 border-b border-gray-100 dark:border-slate-800'
+          ? 'glass py-3 shadow-2xl border-b border-white/10'
           : 'bg-transparent py-5'
       }`}
     >
@@ -92,15 +92,15 @@ export default function Navbar({ darkMode, setDarkMode }: NavbarProps) {
             onClick={(e) => handleNavClick(e, '#home')}
             className="flex items-center space-x-2 group focus:outline-hidden"
           >
-            <div className="w-10 h-10 rounded-lg bg-blue-600 dark:bg-blue-500 flex items-center justify-center text-white font-mono font-bold text-lg shadow-md group-hover:scale-105 transition-transform">
-              <Terminal className="w-5 h-5" />
+            <div className="w-10 h-10 rounded-lg bg-blue-600/20 border border-blue-500/35 flex items-center justify-center text-blue-400 font-mono font-bold text-lg shadow-md group-hover:scale-105 transition-transform">
+              <Terminal className="w-5 h-5 text-glow" />
             </div>
             <div className="flex flex-col">
-              <span className="font-sans font-bold text-lg tracking-tight text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+              <span className="font-serif italic text-glow font-bold text-xl tracking-tighter text-white group-hover:text-blue-400 transition-colors">
                 Atta Ullah
               </span>
-              <span className="font-mono text-[10px] text-gray-500 dark:text-gray-400 tracking-wider">
-                M.Phil CS • AI & NLP
+              <span className="font-mono text-[9px] uppercase tracking-[0.2em] text-blue-400 font-semibold">
+                M.Phil CS | AI & NLP Researcher
               </span>
             </div>
           </a>
@@ -118,15 +118,15 @@ export default function Navbar({ darkMode, setDarkMode }: NavbarProps) {
                   onClick={(e) => handleNavClick(e, item.href)}
                   className={`px-3.5 py-2 rounded-md text-sm font-medium transition-all relative ${
                     isActive
-                      ? 'text-blue-600 dark:text-blue-400'
-                      : 'text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400'
+                      ? 'text-blue-400'
+                      : 'text-slate-300 hover:text-blue-400'
                   }`}
                 >
                   {item.label}
                   {isActive && (
                     <motion.span
                       layoutId="activeNavBackground"
-                      className="absolute bottom-0 left-3 right-3 h-0.5 bg-blue-600 dark:bg-blue-400 rounded-full"
+                      className="absolute bottom-0 left-3 right-3 h-0.5 bg-blue-400 rounded-full text-glow"
                       transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                     />
                   )}
@@ -141,10 +141,10 @@ export default function Navbar({ darkMode, setDarkMode }: NavbarProps) {
             <button
               id="download-cv-btn-desktop"
               onClick={downloadResume}
-              className="flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white font-medium text-sm px-4 py-2.5 rounded-lg shadow-sm hover:shadow-md transition-all active:scale-95 cursor-pointer"
+              className="flex items-center space-x-2 bg-blue-600/20 text-blue-400 border border-blue-500/30 px-5 py-2.5 rounded-full hover:bg-blue-600 hover:text-white hover:border-blue-500 transition-all active:scale-95 cursor-pointer font-medium text-xs tracking-wider uppercase"
             >
               <Download className="w-4 h-4" />
-              <span>Resume</span>
+              <span>Resume ↓</span>
             </button>
           </div>
 
@@ -154,7 +154,7 @@ export default function Navbar({ darkMode, setDarkMode }: NavbarProps) {
             <button
               id="mobile-menu-toggle"
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-hidden focus:ring-2 focus:ring-blue-500 cursor-pointer"
+              className="p-2 rounded-lg text-slate-300 hover:bg-slate-800 focus:outline-hidden focus:ring-2 focus:ring-blue-500 cursor-pointer"
               aria-expanded={isOpen}
               aria-label="Toggle navigation menu"
             >
@@ -173,7 +173,7 @@ export default function Navbar({ darkMode, setDarkMode }: NavbarProps) {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.25, ease: 'easeInOut' }}
-            className="lg:hidden bg-white dark:bg-slate-900 border-b border-gray-200 dark:border-slate-800 overflow-hidden shadow-lg absolute w-full left-0"
+            className="lg:hidden glass border-b border-white/10 overflow-hidden shadow-2xl absolute w-full left-0 bg-slate-950/95"
           >
             <div className="px-4 pt-3 pb-6 space-y-2 max-h-[85vh] overflow-y-auto">
               {navItems.map((item) => {
@@ -187,22 +187,22 @@ export default function Navbar({ darkMode, setDarkMode }: NavbarProps) {
                     onClick={(e) => handleNavClick(e, item.href)}
                     className={`block px-4 py-3 rounded-lg text-base font-medium transition-all ${
                       isActive
-                        ? 'bg-blue-50 dark:bg-blue-950/40 text-blue-600 dark:text-blue-400 border-l-4 border-blue-600 dark:border-blue-500'
-                        : 'text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800'
+                        ? 'bg-blue-950/40 text-blue-400 border-l-4 border-blue-500'
+                        : 'text-slate-300 hover:bg-slate-900'
                     }`}
                   >
                     {item.label}
                   </a>
                 );
               })}
-              <div className="pt-4 border-t border-gray-100 dark:border-slate-800">
+              <div className="pt-4 border-t border-white/5">
                 <button
                   id="download-cv-btn-mobile"
                   onClick={() => {
                     setIsOpen(false);
                     downloadResume();
                   }}
-                  className="flex items-center justify-center space-x-2 w-full bg-blue-600 hover:bg-blue-700 text-white font-medium text-base px-4 py-3 rounded-xl shadow-md transition-all active:scale-95 cursor-pointer mt-2"
+                  className="flex items-center justify-center space-x-2 w-full bg-blue-600/20 text-blue-400 border border-blue-500/30 hover:bg-blue-600 hover:text-white font-medium text-base px-4 py-3 rounded-xl shadow-md transition-all active:scale-95 cursor-pointer mt-2"
                 >
                   <Download className="w-5 h-5" />
                   <span>Download Resume (CV)</span>
