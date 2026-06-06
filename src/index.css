@@ -72,3 +72,228 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 85px; /* Offset sticky header */
 }
+
+/* Comprehensive and elegant light mode styling when html is not (.dark) */
+html:not(.dark) {
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+html:not(.dark) body {
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+html:not(.dark) #portfolio-root {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+}
+
+/* Target all sections to alternate backgrounds and use subtle light borders */
+html:not(.dark) section {
+  background-color: #ffffff !important;
+  background-image: none !important;
+  border-color: #e2e8f0 !important;
+}
+
+html:not(.dark) section:nth-of-type(even) {
+  background-color: #f1f5f9 !important;
+}
+
+html:not(.dark) #home {
+  background-color: #f8fafc !important;
+}
+
+/* Glow and transparent grid masks */
+html:not(.dark) .bg-\[size\:4rem_4rem\] {
+  background-size: 4rem 4rem !important;
+  background-image: linear-gradient(to right, rgba(59, 130, 246, 0.04) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(59, 130, 246, 0.04) 1px, transparent 1px) !important;
+}
+
+/* Light mode text colors */
+html:not(.dark) .text-white,
+html:not(.dark) h1,
+html:not(.dark) h2,
+html:not(.dark) h3,
+html:not(.dark) h4,
+html:not(.dark) h5,
+html:not(.dark) h6 {
+  color: #0f172a !important;
+  text-shadow: none !important;
+}
+
+html:not(.dark) .text-glow {
+  text-shadow: 0 0 10px rgba(59, 130, 246, 0.1) !important;
+}
+
+html:not(.dark) .text-slate-100 {
+  color: #1e293b !important;
+}
+
+html:not(.dark) .text-slate-200 {
+  color: #334155 !important;
+}
+
+html:not(.dark) .text-slate-300 {
+  color: #475569 !important;
+}
+
+html:not(.dark) .text-slate-400 {
+  color: #64748b !important;
+}
+
+html:not(.dark) .text-slate-500 {
+  color: #94a3b8 !important;
+}
+
+/* Glass cards in light mode */
+html:not(.dark) .glass {
+  background: rgba(255, 255, 255, 0.8) !important;
+  border-color: #e2e8f0 !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -4px rgba(0, 0, 0, 0.05) !important;
+}
+
+html:not(.dark) .glass * {
+  color: #0f172a;
+}
+
+html:not(.dark) .glass span.text-slate-400,
+html:not(.dark) .glass span.text-slate-500 {
+  color: #64748b !important;
+}
+
+/* Fix active and inactive navigation menu links in Header */
+html:not(.dark) header {
+  background: rgba(255, 255, 255, 0.85) !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05) !important;
+}
+
+html:not(.dark) header.bg-transparent {
+  background: transparent !important;
+  border-bottom-color: transparent !important;
+  box-shadow: none !important;
+}
+
+html:not(.dark) header .text-slate-300 {
+  color: #334155 !important;
+}
+
+html:not(.dark) header .text-slate-300:hover {
+  color: #2563eb !important;
+}
+
+/* Buttons in light mode */
+html:not(.dark) button#download-cv-btn-desktop,
+html:not(.dark) button#download-cv-btn-mobile {
+  background-color: rgba(37, 99, 235, 0.08) !important;
+  color: #2563eb !important;
+  border-color: rgba(37, 99, 235, 0.2) !important;
+}
+
+html:not(.dark) button#download-cv-btn-desktop:hover,
+html:not(.dark) button#download-cv-btn-mobile:hover {
+  background-color: #2563eb !important;
+  color: #ffffff !important;
+}
+
+html:not(.dark) #hero-cta-projects {
+  background-color: #2563eb !important;
+  color: #ffffff !important;
+  border: none !important;
+}
+
+html:not(.dark) #hero-cta-projects:hover {
+  background-color: #1d4ed8 !important;
+}
+
+html:not(.dark) #hero-cta-download-cv {
+  background-color: #ffffff !important;
+  color: #334155 !important;
+  border-color: #cbd5e1 !important;
+}
+
+html:not(.dark) #hero-cta-download-cv:hover {
+  background-color: #f1f5f9 !important;
+}
+
+html:not(.dark) #hero-cta-contact {
+  background-color: #f8fafc !important;
+  color: #334155 !important;
+  border-color: #cbd5e1 !important;
+}
+
+html:not(.dark) #hero-cta-contact:hover {
+  background-color: #f1f5f9 !important;
+}
+
+/* Hover effects and links inside main cards */
+html:not(.dark) .hover\:bg-slate-900:hover {
+  background-color: #f1f5f9 !important;
+}
+
+html:not(.dark) .hover\:text-blue-400:hover {
+  color: #2563eb !important;
+}
+
+/* Set borders clearly */
+html:not(.dark) .border-white\/5,
+html:not(.dark) .border-white\/10 {
+  border-color: #e2e8f0 !important;
+}
+
+/* Timeline components */
+html:not(.dark) .bg-slate-900\/25,
+html:not(.dark) .bg-slate-900\/40,
+html:not(.dark) .bg-slate-900\/50,
+html:not(.dark) .bg-slate-900 {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Form controls in light mode */
+html:not(.dark) input,
+html:not(.dark) textarea {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+}
+
+html:not(.dark) input::placeholder,
+html:not(.dark) textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+html:not(.dark) input:focus,
+html:not(.dark) textarea:focus {
+  border-color: #2563eb !important;
+  outline: none !important;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1) !important;
+}
+
+/* Specific item styles */
+html:not(.dark) #mobile-drawer {
+  background-color: rgba(255, 255, 255, 0.98) !important;
+  border-color: #e2e8f0 !important;
+}
+
+html:not(.dark) #mobile-drawer a {
+  color: #334155 !important;
+}
+
+html:not(.dark) #mobile-drawer a:hover {
+  background-color: #f1f5f9 !important;
+  color: #2563eb !important;
+}
+
+/* Footers */
+html:not(.dark) footer {
+  background-color: #f1f5f9 !important;
+  border-top: 1px solid #e2e8f0 !important;
+}
+
+html:not(.dark) footer * {
+  color: #475569 !important;
+}

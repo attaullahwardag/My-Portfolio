@@ -15,8 +15,8 @@ export const personalInfo = {
   phone: '+92 345 9876543', // Professional Pakistani format
   location: 'Peshawar, Khyber Pakhtunkhwa, Pakistan',
   dob: '25 March 1991',
-  github: 'https://github.com/attaullah',
-  linkedin: 'https://linkedin.com/in/atta-ullah',
+  github: 'https://github.com/attaullahwardag',
+  linkedin: 'https://pk.linkedin.com/in/attaullah-wardag-86866aa5',
   researchGate: 'https://www.researchgate.net/profile/Atta-Ullah',
   profileImage: '/src/assets/images/profile_avatar_1780350435910.png',
 };
@@ -86,7 +86,7 @@ export const projects: Project[] = [
     longDescription: 'This research project involves harvesting data from YouTube, Facebook, and Twitter, standardizing Pashto script variations, and implementing machine learning and Bi-LSTM neural networks to identify and flag online hate speech. Highly relevant for content moderation in regional languages.',
     category: 'AI & NLP',
     tags: ['Python', 'Bi-LSTM', 'TensorFlow', 'NLP', 'Pashto Data'],
-    githubUrl: 'https://github.com/attaullah/pashto-hate-speech',
+    githubUrl: 'https://github.com/attaullahwardag/pashto-hate-speech',
     metrics: [
       { label: 'Model Accuracy', value: '91.4%' },
       { label: 'Dataset Size', value: '5,200 samples' },
@@ -100,7 +100,7 @@ export const projects: Project[] = [
     longDescription: 'Developed specialized pipelines combining rule-based sentiment lists and supervised ML classifiers (Support Vector Machines, Random Forest) to categorize Pashto comments into Positive, Negative, and Neutral classes.',
     category: 'AI & NLP',
     tags: ['Python', 'Scikit-Learn', 'Sentiment Lexicon', 'NLP'],
-    githubUrl: 'https://github.com/attaullah/pashto-sentiment-analysis',
+    githubUrl: 'https://github.com/attaullahwardag/pashto-sentiment-analysis',
     metrics: [
       { label: 'Accuracy', value: '88.5%' },
       { label: 'F1-Score', value: '87.9%' },
@@ -114,7 +114,7 @@ export const projects: Project[] = [
     longDescription: 'A web-ready Python-based framework that fine-tunes pre-trained multi-lingual BERT models (mBERT) for high-precision text classification in Urdu, Pashto, and English, wrapped in a lightweight interface.',
     category: 'AI & NLP',
     tags: ['mBERT', 'Hugging Face', 'Transformers', 'PyTorch'],
-    githubUrl: 'https://github.com/attaullah/ai-text-classification',
+    githubUrl: 'https://github.com/attaullahwardag/ai-text-classification',
     metrics: [
       { label: 'Languages', value: 'Pashto, Urdu, English' },
       { label: 'Precision', value: '92.1%' },
@@ -128,7 +128,7 @@ export const projects: Project[] = [
     longDescription: 'An intuitive single-page background removal application tailored for quick asset production. It utilizes modern client-side processing alongside highly optimized model inference, featuring an instant background color swapper and edge-softening filters.',
     category: 'Web Apps',
     tags: ['React.js', 'Tailwind CSS', 'AI Segmenter', 'Web-API'],
-    githubUrl: 'https://github.com/attaullah/bg-remover-web',
+    githubUrl: 'https://github.com/attaullahwardag/bg-remover-web',
     liveUrl: '#',
     metrics: [
       { label: 'Processing Time', value: '< 2 seconds' },
@@ -143,7 +143,7 @@ export const projects: Project[] = [
     longDescription: 'Developed an elegant utility with customizable templates for different countries. Features include auto-cropping according to biometric layout standards, eye-level alignment guidelines, and a printable grid-sheet layout generator.',
     category: 'Web Apps',
     tags: ['React.js', 'Canvas API', 'Tailwind CSS', 'Biometrics'],
-    githubUrl: 'https://github.com/attaullah/passport-photo-generator',
+    githubUrl: 'https://github.com/attaullahwardag/passport-photo-generator',
     liveUrl: '#',
     metrics: [
       { label: 'Supported Specs', value: '50+ Countries' },
@@ -157,7 +157,7 @@ export const projects: Project[] = [
     longDescription: 'A dedicated repository serving as a compilation of educational Jupyter Notebooks, raw text corpuses with annotation metadata, lexicographical structures, and reference guides for low-resource NLP studies.',
     category: 'Research',
     tags: ['Python', 'Jupyter Notebooks', 'Datasets', 'GitHub Pages'],
-    githubUrl: 'https://github.com/attaullah/nlp-research-repository',
+    githubUrl: 'https://github.com/attaullahwardag/nlp-research-repository',
     liveUrl: '#',
     metrics: [
       { label: 'Preprints Available', value: '3' },

@@ -11,8 +11,8 @@ M.Phil Computer Science | AI & NLP Researcher | Software Developer
 Email: wardag.atta@gmail.com
 Phone: +92 345 9876543
 Location: Peshawar, Khyber Pakhtunkhwa, Pakistan
-GitHub: github.com/attaullah
-LinkedIn: linkedin.com/in/atta-ullah
+GitHub: github.com/attaullahwardag
+LinkedIn: linkedin.com/in/attaullah-wardag-86866aa5
 ResearchGate: researchgate.net/profile/Atta-Ullah
 
 -------------------------------------------------------------------
@@ -48,12 +48,16 @@ TECHNICAL SKILLS
 ACADEMIC BACKGROUND
 -------------------------------------------------------------------
 * M.Phil in Computer Science (Active / In Research Phase)
-  Coursework CGPA: 3.8/4.0
+  Shaheed Benazir Bhutto University, Sheringal - Dir Upper, KP, Pakistan
   Focus: Advanced Machine Learning, Natural Language Processing, Low-Resource AI
 
 * Master of Computer Science (MCS) | 2020 - 2022
-  University of Peshawar - Peshawar, KP, Pakistan
+  Virtual University of Pakistan - Peshawar Campus, Pakistan
   Grade: A Grade (First Division)
+
+* Bachelor of Science in Computer Science (B.Sc CS) | 2017 - 2019
+  University of Peshawar - Peshawar, KP, Pakistan
+  Grade: First Division
 
 * Diploma in Information Technology (DIT) | 2019
   KP Board of Technical Education - Peshawar, Pakistan
